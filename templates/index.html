@@ -124,7 +124,7 @@
                   <div class="skill-mf">
                     <p class="title-s">Skill</p>
                     {% for skill in skills %}
-                        <span>{{ skill.title }}</span>
+                        <span><strong>{{ skill.title }}</strong></span>
                         <span class="pull-right">{{ skill.level }}%</span>
                         {% if request.user.is_authenticated and users.id == request.user.id %}
                             <a href="{% url 'update-skill' skill.pk %}"> Update</a>
